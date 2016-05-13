@@ -1,24 +1,55 @@
+/***********************************************************************************************
+ * User Configuration.
+ **********************************************************************************************/
+/** Map relative paths to URLs. */
+const map: any = {
+};
+
+/** User packages configuration. */
+const packages: any = {
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+/***********************************************************************************************
+ * Everything underneath this line is managed by the CLI.
+ **********************************************************************************************/
 const barrels: string[] = [
-  'protected',
+  // Angular specific barrels.
+  '@angular/core',
+  '@angular/common',
+  '@angular/compiler',
+  '@angular/http',
+  '@angular/router',
+  '@angular/platform-browser',
+  '@angular/platform-browser-dynamic',
+
+  // Thirdparty barrels.
+  'rxjs',
+
+  // App specific barrels.
   'public',
   'shared',
   /** @cli-barrel */
 ];
 
-function createPackageConfig(barrelList: string[]): any {
-  return barrelList.reduce((barrelConfig: any, barrelName: string) => {
-    barrelConfig[barrelName] = {
-      format: 'register',
-      defaultJSExtensions: true
-    };
-    return barrelConfig;
-  }, {});
-}
+const cliSystemConfigPackages: any = {};
+barrels.forEach((barrelName: string) => {
+  cliSystemConfigPackages[barrelName] = { main: 'index' };
+});
 
+console.log(cliSystemConfigPackages['@angular/core']);
 
-// Add your custom SystemJS configuration here.
-export const config: any = {
-  packages: Object.assign({
-    // Add your custom SystemJS packages here.
-  }, createPackageConfig(barrels))
-};
+/** Type declaration for ambient System. */
+declare var System: any;
+
+// Apply the CLI SystemJS configuration.
+System.config({
+  map: {
+    '@angular': 'vendor/@angular',
+    'rxjs': 'vendor/rxjs',
+  },
+  packages: cliSystemConfigPackages
+});
+
+// Apply the user's configuration.
+System.config({ map, packages });
