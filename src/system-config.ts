@@ -37,8 +37,6 @@ barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
 
-console.log(cliSystemConfigPackages['@angular/core']);
-
 /** Type declaration for ambient System. */
 declare var System: any;
 
