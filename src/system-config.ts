@@ -9,10 +9,10 @@ const map: any = {
 const packages: any = {
 };
 
-////////////////////////////////////////////////////////////////////////////////////////////////
-/***********************************************************************************************
- * Everything underneath this line is managed by the CLI.
- **********************************************************************************************/
+/**************************************************
+ * Everything in this file is managed by the CLI. *
+ **************************************************/
+
 const barrels: string[] = [
   // Angular specific barrels.
   '@angular/core',
@@ -29,6 +29,9 @@ const barrels: string[] = [
   // App specific barrels.
   'public',
   'shared',
+  'public/side-nav.component',
+  'public/container.component',
+  'public/+user-guide/user-guide.component',
   /** @cli-barrel */
 ];
 

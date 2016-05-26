@@ -1,0 +1,27 @@
+.side-nav {
+  .logo {
+    width: 100px;
+    margin-left: 25%;
+  }
+  ul.nav {
+    li {
+      list-style: none;
+      text-align: center;
+      margin: 15px 0;
+      a {
+        display: inline;
+        text-decoration: none;
+        color: #F5F5F5;
+        padding: 5px 10px;
+        &:hover, &:focus {
+          background-color: #757575;
+          color: #DCE775;
+        }
+      }
+      &.active a {
+        background-color: #757575;
+        color: #DCE775;
+      }
+    }
+  }
+}

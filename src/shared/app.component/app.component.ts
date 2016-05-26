@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
-import { SideNavComponent } from "../../public/side-nav.component/side-nav.component";
-import { ContainerComponent } from "../../public/container.component/container.component";
-import { UserGuideComponent } from "../../public/+user-guide/user-guide.component/user-guide.component";
+import { SideNavComponent } from "../../public/side-nav.component";
+import { ContainerComponent } from "../../public/container.component";
+import { UserGuideComponent } from "../../public/+user-guide/user-guide.component";
 
 @Component({
     moduleId: __moduleName,
