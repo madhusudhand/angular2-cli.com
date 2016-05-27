@@ -22,17 +22,36 @@ const barrels: string[] = [
   '@angular/router',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
+  /** @angular-barrel */
 
   // Thirdparty barrels.
   'rxjs',
+  /** @thirdparty-barrel */
 
   // App specific barrels.
   'public',
   'shared',
+
+  // Routes
+  'public/+user-guide/user-guide.component',
+  /** @route-barrel */
+
+  // Components
   'public/side-nav.component',
   'public/container.component',
-  'public/+user-guide/user-guide.component',
-  /** @cli-barrel */
+  /** @component-barrel */
+
+  // Directives
+  /** @directive-barrel */
+
+  // Services
+  /** @service-barrel */
+
+  // Pipes
+  /** @pipe-barrel */
+
+  // Other
+  /** @other-barrel */
 ];
 
 const cliSystemConfigPackages: any = {};

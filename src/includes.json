@@ -1,0 +1,7 @@
+{
+  "app": ["CNAME"],
+  "thirdparty": [],
+  "node_modules": [
+    "normalize.css"
+  ]
+}
