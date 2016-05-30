@@ -29,6 +29,7 @@ const barrels: string[] = [
   /** @thirdparty-barrel */
 
   // App specific barrels.
+  './',
   'public',
   'shared',
 
@@ -56,7 +57,7 @@ const barrels: string[] = [
 
 const cliSystemConfigPackages: any = {};
 barrels.forEach((barrelName: string) => {
-  cliSystemConfigPackages[barrelName] = { main: 'index' };
+  cliSystemConfigPackages[barrelName] = { main: 'index'};
 });
 
 /** Type declaration for ambient System. */
